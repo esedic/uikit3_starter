@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="template" version="3.8" client="site" method="upgrade">
+    <name>uikit</name>
+    <version>1.0</version>
+    <creationDate>11.4.2018</creationDate>
+    <author>Spletodrom</author>
+    <authorEmail>elvis@spletodrom.si</authorEmail>
+    <copyright>Copyright (C) 2018 Spletodrom. All rights reserved</copyright>
+    <description>Template for Joomla based on Yootheme UIkit 3</description>
+    <license>http://www.gnu.org/licenses/gpl.html GNU/GPL</license>
+
+    <files>
+        <filename>component.php</filename>
+        <filename>error.php</filename>
+        <filename>offline.php</filename>
+        <filename>index.php</filename>
+        <filename>templateDetails.xml</filename>
+        <filename>template_preview.png</filename>
+        <filename>template_thumbnail.png</filename>
+        <folder>css</folder>
+        <folder>html</folder>
+        <folder>images</folder>
+        <folder>js</folder>
+        <folder>language</folder>
+        <folder>less</folder>
+        <folder>scss</folder>
+    </files>
+
+    <positions>
+        <position>above</position>
+        <position>toolbar-left</position>
+        <position>toolbar-right</position>
+        <position>menu</position>
+        <position>offcanvas</position>
+        <position>debug</position>
+        <position>search</position>
+        <position>breadcrumbs</position>
+        <position>banner</position>
+        <position>top-a</position>
+        <position>top-b</position>
+        <position>top-c</position>
+        <position>top-d</position>
+        <position>top-e</position>
+        <position>sidebar-a</position>
+        <position>sidebar-b</position>
+        <position>copyright</position>
+        <position>footer</position>
+        <position>footer-a</position>
+        <position>footer-b</position>
+        <position>footer-c</position>
+        <position>footer-d</position>
+        <position>main-top-a</position>
+        <position>main-top-b</position>
+        <position>main-bottom-a</position>
+        <position>main-bottom-b</position>
+        <position>bottom-a</position>
+        <position>bottom-b</position>
+        <position>bottom-c</position>
+        <position>bottom-d</position>
+        <position>bottom-e</position>
+    </positions>
+
+    <languages folder="language">
+        <language tag="en-GB">en-GB/en-GB.tpl_uikit.ini</language>
+        <language tag="en-GB">en-GB/en-GB.tpl_uikit.sys.ini</language>
+    </languages>
+
+    <config>
+        <fields name="params">
+            <fieldset name="TPL_UIKIT_SETTINGS_GENERAL_TITLE" label="TPL_UIKIT_SETTINGS_GENERAL_DESC">
+                <field 
+                    name="logo" 
+                    type="media"
+                    label="TPL_UIKIT_FIELD_LOGO_LABEL" 
+                    description="TPL_UIKIT_FIELD_LOGO_DESC" 
+                />
+                <field 
+                    name="logomobile" 
+                    type="media"
+                    label="TPL_UIKIT_FIELD_LOGO_MOBILE_LABEL" 
+                    description="TPL_UIKIT_FIELD_LOGO_MOBILE_DESC" 
+                />
+
+                <field 
+                    name="sitetitle" 
+                    type="text" 
+                    default=""
+                    label="TPL_UIKIT_FIELD_SITETITLE_LABEL"
+                    description="TPL_UIKIT_FIELD_SITETITLE_DESC"
+                    filter="string" 
+                />
+
+                <field 
+                    name="sitedescription"  
+                    type="text" 
+                    default=""
+                    label="TPL_UIKIT_FIELD_DESCRIPTION_LABEL"
+                    description="TPL_UIKIT_FIELD_DESCRIPTION_DESC"
+                    filter="string"
+                />
+
+                <field 
+                    name="logo_in_menu" 
+                    type="radio" 
+                    class="btn-group" 
+                    default="0"
+                    label="TPL_UIKIT_FIELD_LOGOMENU_LABEL"
+                    description="TPL_UIKIT_FIELD_LOGOMENU_DESC"
+                >
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+
+                <field 
+                    name="menuleft" 
+                    type="radio" 
+                    class="btn-group" 
+                    default="0"
+                    label="TPL_UIKIT_FIELD_LEFTMENU_LABEL"
+                    description="TPL_UIKIT_FIELD_LEFTMENU_DESC"
+                >
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+
+                <field 
+                    name="menucenter" 
+                    type="radio" 
+                    class="btn-group" 
+                    default="0"
+                    label="TPL_UIKIT_FIELD_CENTERMENU_LABEL"
+                    description="TPL_UIKIT_FIELD_CENTERMENU_DESC"
+                >
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+
+                <field 
+                    name="menuright" 
+                    type="radio" 
+                    class="btn-group" 
+                    default="0"
+                    label="TPL_UIKIT_FIELD_RIGHTMENU_LABEL"
+                    description="TPL_UIKIT_FIELD_RIGHTMENU_DESC"
+                >
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+            </fieldset>
+        </fields>
+    </config>
+</extension>
