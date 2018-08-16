@@ -1,4 +1,4 @@
-import {$, apply, createEvent, isString, mergeOptions, toNode} from '../util/index';
+import {$, apply, createEvent, isString, mergeOptions, toNode} from 'uikit-util';
 
 export default function (UIkit) {
 
@@ -17,11 +17,11 @@ export default function (UIkit) {
     };
 
     UIkit.mixin = function (mixin, component) {
-        component = (isString(component) ? UIkit.components[component] : component) || this;
+        component = (isString(component) ? UIkit.component(component) : component) || this;
         mixin = mergeOptions({}, mixin);
         mixin.mixins = component.options.mixins;
         delete component.options.mixins;
-        component.options = mergeOptions(mixin, component.options);
+        component.options = mergeOptions(component.options, mixin);
     };
 
     UIkit.extend = function (options) {
@@ -37,7 +37,7 @@ export default function (UIkit) {
         Sub.prototype.constructor = Sub;
         Sub.options = mergeOptions(Super.options, options);
 
-        Sub['super'] = Super;
+        Sub.super = Super;
         Sub.extend = Super.extend;
 
         return Sub;
