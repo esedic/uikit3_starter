@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 /**
  * @package     Joomla.Site
  * @subpackage  mod_login
@@ -13,7 +13,7 @@ JLoader::register('UsersHelperRoute', JPATH_SITE . '/components/com_users/helper
 
 JHtml::_('behavior.keepalive');
 ?>
-<form action="<?php echo JRoute::_('index.php', true, $params->get('usesecure')); ?>" method="post" id="login-form" class="form-inline">
+<form action="<?php echo JRoute::_('index.php', true, $params->get('usesecure')); ?>" method="post" id="login-form" class="uk-form">
 	<?php if ($params->get('pretext')) : ?>
 		<div class="pretext">
 			<p><?php echo $params->get('pretext'); ?></p>
@@ -41,7 +41,7 @@ JHtml::_('behavior.keepalive');
 			<?php if ($usersConfig->get('allowUserRegistration')) : ?>
 				<li>
 					<a href="<?php echo JRoute::_('index.php?option=com_users&view=registration'); ?>">
-					<?php echo JText::_('MOD_LOGIN_REGISTER'); ?> <span class="icon-arrow-right"></span></a>
+					<?php echo JText::_('MOD_LOGIN_REGISTER'); ?> <span uk-icon="arrow-right"></span></a>
 				</li>
 			<?php endif; ?>
 				<li>
